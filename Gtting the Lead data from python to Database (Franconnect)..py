@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 
 import time
 time1 = time.time()
@@ -24,11 +19,11 @@ connection_db = 1
 fb_connection = 1
 flag = 1
 data_present = 1
-access_token = 'EAAD4BZAl5iDABAA2U4fpmOvU35tmmxeELuGMmD6vrADVjh30PZClc0IJx7uRj3xuvE4xF4ZCNlzYVM7jRETeant0FFETpPpFZAZCQR1QXDNKvxTonShZBuSQuNXIAYUBe7T0jQrFvWnC6Yt4aloIF272qRYOjIPZAVg8Evp4SbIx6uFqBuF6WzGxZA9LBjRczoMZD'
-ad_account_id = 'act_490659701459349'
-app_secret = '2a18335ee2f12d6209179f7960058306'
-app_id = '272702933403696'
-page_id = '301959993192748'
+access_token = '## get the access token from facebook'
+ad_account_id = 'this is the facebook account ID'
+app_secret = 'this is the app secret ID'
+app_id = 'This is the app ID'
+page_id = 'Page id for which we are downloading the data'
 
 now_time = int(round(time.time() * 1000)) - 60*60*120
 time_one_hour = now_time - 60*60
