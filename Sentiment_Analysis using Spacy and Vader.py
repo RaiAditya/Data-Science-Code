@@ -13,7 +13,7 @@ import spacy
 nlp = spacy.load('en_core_web_sm')
 
 ### adding all the smg sub files
-os.chdir("/Users/21412/Documents/Pure Barre/smg/SMG Files/SMG Files")
+os.chdir("/Users/Files")
 for root, dirs, files in os.walk("."):
     df = pd.read_csv(files[0], sep='|')
     for filename in files[1:len(files)]:
@@ -23,9 +23,9 @@ for root, dirs, files in os.walk("."):
         print(filename + " concatnated")
 
 ### Back to main directory
-os.chdir("/Users/21412/Documents/Pure Barre/SMG_7_1")
+os.chdir("/Users")
 
-df.to_csv("All New Smg Raw data.csv")
+df.to_csv("All Raw data.csv")
 
 df['all_comments'] = df["S000032"].map(str) + df["S000033"].map(str) +df["S000034"].map(str) + df["S000041"].map(str)
 df['teacher_comments'] = df["S000041"]
@@ -142,13 +142,12 @@ df['Tea_subjectivity'] = syub
 #df['vedar_senti'] = vss
 df['Tea_comp'] = comp
 
-df.to_csv("All_new_smg_sentiment.csv")
+df.to_csv("All_sentiment.csv")
 
 df = df[df['TERM'] == 'WebOK'].reset_index(drop=True)
 #df2 = df1
 #df = df1
 
-#df44 = pd.read_excel("All_new_smg_sentiment.xlsx")
 #df = df44[df44['TERM'] == 'WebOK']
 
 df['store_number'] = df["StoreId"].str.slice(0, 4, 1)
@@ -202,9 +201,9 @@ for i in range(len(result)):
 
      
 
-result.to_csv("Most_negative_sentence_key3.csv")
+result.to_csv("Most_negative_sentence_key.csv")
 
-#os.chdir("/Users/21412/Documents/Pure Barre/smg")
+#os.chdir("/Users")
 
 from dateutil.parser import parse
 
@@ -226,6 +225,4 @@ for i in range(len(result)):
         print(i)
 
 
-weekly_final.to_csv("weekly_Sentiment_studio_wise3333.csv")
-
-#df = pd.read_csv("PB_RawData_10152018.csv", sep='|', lineterminator='/r')
+weekly_final.to_csv("weekly_Sentiment_studio_wise.csv")
