@@ -6,7 +6,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 full_data = pd.DataFrame()
 browser = webdriver.Firefox()
-data = pd.read_excel('Pure Barre Facebook links.xlsx')
+data = pd.read_excel('Facebook links.xlsx')
 data1 = pd.read_excel('data3.xlsx')
 review_link = '/reviews/?ref=page_internal'
 not_data = []
@@ -83,10 +83,10 @@ for i in range(1,100):
             
         time.sleep(random.randint(5,8))
         full_data = full_data.append(dataf)
-        full_data.to_csv("PB_sample1010_v2231.csv")
+        full_data.to_csv("sample.csv")
         print(i + 700)
     except:
         print(i)    
         not_data.append(i)
         time.sleep(random.randint(2,4))
-    full_data.to_csv("PB_sample1010_v2231.csv")
+    full_data.to_csv("sample.csv")
