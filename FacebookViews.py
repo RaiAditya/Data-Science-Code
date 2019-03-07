@@ -1,15 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
 from os import getenv
 import requests
 import pandas as pd
 import pyodbc as db
 import os
-token = "EAAD4BZAl5iDABAA2U4fpmOvU35tmmxeELuGMmD6vrADVjh30PZClc0IJx7uRj3xuvE4xF4ZCNlzYVM7jRETeant0FFETpPpFZAZCQR1QXDNKvxTonShZBuSQuNXIAYUBe7T0jQrFvWnC6Yt4aloIF272qRYOjIPZAVg8Evp4SbIx6uFqBuF6WzGxZA9LBjRczoMZD"
+token = "token"
 
 #results = r.json()
 #connection = db.connect('Driver={SQL Server};''Server=RMWSQLADL01\DATAWHS;''Database=Marketing_Dashboard;''uid=RMW_SQL_Admin;pwd=Merilytics@123')
@@ -17,7 +12,7 @@ token = "EAAD4BZAl5iDABAA2U4fpmOvU35tmmxeELuGMmD6vrADVjh30PZClc0IJx7uRj3xuvE4xF4
 
 outputdf_CP = pd.DataFrame(columns=['Category','Date','Types','View_count'])
 
-req = "575173042522349/insights/page_fans,page_views_by_profile_tab_logged_in_unique,page_views_by_age_gender_logged_in_unique,page_views_by_site_logged_in_unique,page_views_external_referrals,page_content_activity_by_city_unique"
+req = "page_id/insights/page_fans,page_views_by_profile_tab_logged_in_unique,page_views_by_age_gender_logged_in_unique,page_views_by_site_logged_in_unique,page_views_external_referrals,page_content_activity_by_city_unique"
 
 def req_facebook(req):
     r= requests.get("https://graph.facebook.com/v3.0/"+ req,{'access_token' : token})
