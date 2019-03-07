@@ -1,16 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 13 11:43:24 2018
 
-@author: 21329
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import requests
 import pyodbc as db
 import pandas as pd
