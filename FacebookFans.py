@@ -22,14 +22,14 @@ import requests
 import pyodbc as db
 import pandas as pd
 import os
-token = "EAAD4BZAl5iDABAA2U4fpmOvU35tmmxeELuGMmD6vrADVjh30PZClc0IJx7uRj3xuvE4xF4ZCNlzYVM7jRETeant0FFETpPpFZAZCQR1QXDNKvxTonShZBuSQuNXIAYUBe7T0jQrFvWnC6Yt4aloIF272qRYOjIPZAVg8Evp4SbIx6uFqBuF6WzGxZA9LBjRczoMZD"
+token = "token"
 
 outputdf_CP = pd.DataFrame(columns=['Category','Date','Fans_Count','Type'])
 
 #connection = db.connect('Driver={SQL Server};''Server=RMWSQLADL01\DATAWHS;''Database=Marketing_Dashboard;''uid=RMW_SQL_Admin;pwd=Merilytics@123')
 #cur = connection.cursor()
 
-req = "301959993192748/insights/page_views_total"
+req = "page_id/insights/page_views_total"
 
 def req_facebook(req):
     r= requests.get("https://graph.facebook.com/v3.0/"+ req,{'access_token' : token})
