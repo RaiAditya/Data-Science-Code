@@ -1,28 +1,16 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jul 18 18:37:27 2018
 
-@author: 21329
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import requests
 import pyodbc as db
 import pandas as pd
 import os
-token = "EAAD4BZAl5iDABAA2U4fpmOvU35tmmxeELuGMmD6vrADVjh30PZClc0IJx7uRj3xuvE4xF4ZCNlzYVM7jRETeant0FFETpPpFZAZCQR1QXDNKvxTonShZBuSQuNXIAYUBe7T0jQrFvWnC6Yt4aloIF272qRYOjIPZAVg8Evp4SbIx6uFqBuF6WzGxZA9LBjRczoMZD"
+token = "token"
 
 outputdf_CP = pd.DataFrame(columns=['Category','Date','Type','View_count'])
 
 #connection = db.connect('Driver={SQL Server};''Server=RMWSQLADL01\DATAWHS;''Database=Marketing_Dashboard;''uid=RMW_SQL_Admin;pwd=Merilytics@123')
 #cur = connection.cursor()
 
-req = "301959993192748/insights/page_fans,page_fans_by_like_source,page_negative_feedback_by_type/day"
+req = "page_id/insights/page_fans,page_fans_by_like_source,page_negative_feedback_by_type/day"
 
 def req_facebook(req):
     r= requests.get("https://graph.facebook.com/v3.0/"+ req,{'access_token' : token})
