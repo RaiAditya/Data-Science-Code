@@ -16,7 +16,7 @@ import pyodbc as db
 import pandas as pd
 import os
 #Permenant Access Token
-token = "EAAD4BZAl5iDABAA2U4fpmOvU35tmmxeELuGMmD6vrADVjh30PZClc0IJx7uRj3xuvE4xF4ZCNlzYVM7jRETeant0FFETpPpFZAZCQR1QXDNKvxTonShZBuSQuNXIAYUBe7T0jQrFvWnC6Yt4aloIF272qRYOjIPZAVg8Evp4SbIx6uFqBuF6WzGxZA9LBjRczoMZD"
+token = "token"
 
 outputdf_CP = pd.DataFrame(columns=['Category','Date','Type','Value'])
 
@@ -25,7 +25,7 @@ outputdf_CP = pd.DataFrame(columns=['Category','Date','Type','Value'])
 #cur = connection.cursor()
 
 #Include required metrics 
-req = "301959993192748/insights/page_total_actions,page_views_total,page_views_logged_in_unique,page_fan_removes,page_fan_adds,page_fans_by_like_source,page_impressions_unique,page_impressions_paid_unique,page_impressions_organic_unique,page_actions_post_reactions_like_total,page_actions_post_reactions_love_total,page_actions_post_reactions_wow_total,page_actions_post_reactions_haha_total,page_actions_post_reactions_sorry_total,page_actions_post_reactions_anger_total/day"
+req = "Page_id/insights/page_total_actions,page_views_total,page_views_logged_in_unique,page_fan_removes,page_fan_adds,page_fans_by_like_source,page_impressions_unique,page_impressions_paid_unique,page_impressions_organic_unique,page_actions_post_reactions_like_total,page_actions_post_reactions_love_total,page_actions_post_reactions_wow_total,page_actions_post_reactions_haha_total,page_actions_post_reactions_sorry_total,page_actions_post_reactions_anger_total/day"
 
 #call to facebook API
 def req_facebook(req):
